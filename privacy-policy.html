@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy policy for the Hintario Chrome extension.">
+    <title>Hintario Privacy Policy</title>
+    <style>
+      :root { color-scheme: light; font: 16px/1.6 system-ui, sans-serif; color: #202a3a; background: #f3f5f8; }
+      body { max-width: 820px; margin: 0 auto; padding: 28px 20px; }
+      main { padding: 28px; border: 1px solid #e1e6ef; border-radius: 18px; background: #fff; }
+      h1, h2 { line-height: 1.2; color: #16243b; }
+      h1 { margin-top: 0; }
+      h2 { margin-top: 28px; font-size: 1.15rem; }
+      p, li { color: #46546a; }
+      a { color: #315fbd; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 9px; border: 1px solid #e1e6ef; text-align: left; vertical-align: top; }
+      th { background: #f5f7fa; }
+      .updated { color: #778398; font-size: .9rem; }
+      @media (max-width: 560px) { body { padding: 12px; } main { padding: 18px; } table { font-size: .85rem; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hintario Privacy Policy</h1>
+      <p class="updated">Effective date: October 19, 2026</p>
+      <p>Hintario translates text that you select on a web page and displays the result beside that text. This policy describes the data Hintario handles, where it goes, and how you can remove it.</p>
+
+      <h2>Data sent to translation providers</h2>
+      <p>When you request a translation, Hintario sends the selected text, source and target languages, and, for a single word, a short phrase around it (up to 12 words) to translation providers over HTTPS. If a provider fails or limits a request, Hintario may send the text to another provider.</p>
+      <table>
+        <thead><tr><th>Provider</th><th>Recipient</th><th>When it is used</th></tr></thead>
+        <tbody>
+          <tr><td>DeepL, Bing via DuckDuckGo, Yandex, Google Translate</td><td><code>translate.privacyredirect.com</code> and <code>mozhi.adminforge.de</code> (public Mozhi instances)</td><td>Used if no API key service is configured or available. The instance operator receives the text and forwards it to the selected engine.</td></tr>
+          <tr><td>MyMemory</td><td><code>api.mymemory.translated.net</code></td><td>Another available translation service. If you add a contact email for its quota, that email is included in the request.</td></tr>
+          <tr><td>Google Cloud Translation</td><td><code>translation.googleapis.com</code></td><td>Used when you configure a Google Cloud API key. The key is sent to Google in an HTTPS request header. Usage may incur charges on your Google Cloud account.</td></tr>
+          <tr><td>Managed LibreTranslate</td><td><code>libretranslate.com</code></td><td>Used when you configure a LibreTranslate API key. The key is sent only to this endpoint.</td></tr>
+        </tbody>
+      </table>
+      <p>The public Mozhi instances are operated by independent third parties and can change their availability or usage limits. Their operators and the selected translation engine may receive the text. See the <a href="https://git.projectsegfau.lt/arya/mozhi">Mozhi project and supported engines</a>, <a href="https://docs.cloud.google.com/translate/data-usage">Google Cloud Translation data usage</a>, and <a href="https://mymemory.translated.net/terms-and-conditions">MyMemory terms and privacy information</a>. Review third-party terms before sending confidential text.</p>
+
+      <h2>Data stored in Chrome</h2>
+      <p>To show and restore hints, Hintario stores translation history in Chrome's local extension storage. A history record may contain the selected text, its translation, a short excerpt before and after the selection, the page origin and path, an embedded frame location, the hint style, and the time it was created. History stays in this Chrome profile and is not sent to Hintario's developer.</p>
+      <p>You can review and remove a site's history or clear all history from the History tab in Hintario settings. You can also delete an individual hint on the page. Uninstalling Hintario removes its extension storage through Chrome.</p>
+      <p>Language, interface language, keyboard shortcut, and selection icon preferences use Chrome's sync storage and may sync through your Chrome profile. Hint styles and optional provider API keys are stored locally in the browser and are not synced. Provider API keys are sent only to their corresponding provider when you request a translation.</p>
+      <p>Hintario keeps up to the 30 most recent translation diagnostic records in local extension storage for troubleshooting. They contain timestamps, language pairs, browser and extension versions, provider identifiers, request durations, and error categories. They never contain selected text, translations, page addresses, or API keys. The records stay on this device, are replaced by newer entries, and are not sent to the developer.</p>
+
+      <h2>Site access and permissions</h2>
+      <p>Hintario runs on pages you visit so it can respond to a selected phrase and restore saved hints, including inside embedded reading frames. Page text is read locally only as needed to locate the selected phrase and position the hint. Hintario does not send general page contents, browsing history, or page addresses to its developer.</p>
+      <p>The extension requests <code>scripting</code> to operate in accessible page frames, <code>storage</code> for preferences and hint history, and HTTP/HTTPS site access to restore hints, associate them with the correct page, and work in embedded reader frames. See the Chrome Web Store listing for the full permission justifications.</p>
+
+      <h2>Tracking and data sharing</h2>
+      <p>Hintario contains no analytics, advertising, tracking pixels, or developer-operated translation server. It does not sell user data. Translation text may be sent to more than one provider if a request needs another attempt.</p>
+
+      <h2>Chrome Web Store Limited Use</h2>
+      <p>Hintario's use of data received through Chrome APIs is limited to providing its disclosed single purpose and complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy or support questions, contact <a href="mailto:php.prasviryn.dev@gmail.com">php.prasviryn.dev@gmail.com</a>.</p>
+
+    </main>
+  </body>
+</html>
